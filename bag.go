@@ -1,9 +1,13 @@
-package bag
+package utils
 
 import (
 	"fmt"
 	"reflect"
 )
+
+/* Bag
+ * Bag wraps up around array to provide a fast and efficent array like system bla bla
+ */
 
 type Bag struct {
 	data []interface{}
@@ -60,6 +64,13 @@ func (this *Bag) Contains(value interface{}) bool {
 	}
 
 	return false
+}
+
+// Make sure bag has enough space, if not - grow
+func (this *Bag) EnsureCapacity(index int) {
+	if index > len(this.data) {
+		this.Grow()
+	}
 }
 
 // Print data
