@@ -5,10 +5,6 @@ import (
 	"reflect"
 )
 
-/* Bag
- * Bag wraps up around array to provide a fast and efficent array like system bla bla
- */
-
 type Bag struct {
 	data []interface{}
 	size int
