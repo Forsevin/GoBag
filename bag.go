@@ -29,7 +29,7 @@ func (this *Bag) Set(index int, value interface{}) {
 
 // Add value to last avaible element
 func (this *Bag) Add(value interface{}) {
-	this.Set(this.size+1, value)
+	this.Set(this.size, value)
 }
 
 // Grow by 64
